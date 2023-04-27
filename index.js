@@ -23,7 +23,7 @@ class Pokemon {
             console.log(`${this.name} is already dead!`)
         }
         else {
-          console.log(`${this.name} status \nhealth: ${this.health} \nmagic: ${this.magic}`);  
+          console.log(`---- ${this.name} status ---- \nhealth: ${this.health} \nmagic: ${this.magic}`);  
         }
     }
 
@@ -37,7 +37,7 @@ class Pokemon {
             }
             else {
                 if(target.health <= 0)
-                {console.log(`${target.name} is killed!`)}
+                {console.log(`${this.name} is the winner! ${target.name} is killed!`)}
             
                 else {
                     target.health -= this.skills[i].damageAmount;
@@ -72,30 +72,32 @@ let poisonSeed = new AttackSkill ('poison seed', 20, 20);
 let fire = new AttackSkill('fire', 10, 10);
 let water = new AttackSkill('water', 15, 15);
 
-// console.log(pikachu.setSkills(lightning));
-// console.log(bulbasaur.setSkills(poisonSeed));
-// console.log("=".repeat(20));
+console.log(pikachu.setSkills(lightning));
+console.log(bulbasaur.setSkills(poisonSeed));
+console.log(pikachu);
+console.log(bulbasaur);
+console.log("=".repeat(20));
 
-// pikachu.showStatus();
-// bulbasaur.showStatus();
-// console.log("=".repeat(20));
+pikachu.showStatus();
+bulbasaur.showStatus();
+console.log("=".repeat(20));
 
-// pikachu.attack(0, bulbasaur);
-// bulbasaur.attack(0, pikachu);
-// pikachu.showStatus();
-// bulbasaur.showStatus();
+pikachu.attack(0, bulbasaur);
+bulbasaur.attack(0, pikachu);
+pikachu.showStatus();
+bulbasaur.showStatus();
 
-// pikachu.attack(0, bulbasaur);
-// console.log("=".repeat(20));
+pikachu.attack(0, bulbasaur);
+console.log("=".repeat(20));
 
-// pikachu.getMagic(50);
-// pikachu.showStatus();
-// console.log("=".repeat(20));
+pikachu.getMagic(50);
+pikachu.showStatus();
+console.log("=".repeat(20));
 
-// pikachu.attack(0, bulbasaur);
-// pikachu.showStatus();
-// bulbasaur.showStatus();
-// console.log("=".repeat(20));
+pikachu.attack(0, bulbasaur);
+pikachu.showStatus();
+bulbasaur.showStatus();
+console.log("=".repeat(20));
 
-// pikachu.attack(0, bulbasaur);
-// pikachu.attack(0, bulbasaur);
+pikachu.attack(0, bulbasaur);
+pikachu.attack(0, bulbasaur);
